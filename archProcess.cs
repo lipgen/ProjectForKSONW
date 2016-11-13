@@ -16,7 +16,7 @@ namespace ProjectForKSONW_XMLParse
         public byte cateSubMCP;     //КатСубМСП
         public byte specNewMCP;     //ПризНовМСП
     }
-    class Program
+    class archProcess
     {
         static string projDir = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
         static void filesProcess(List<Doc> docs, string[] fileEntries)
