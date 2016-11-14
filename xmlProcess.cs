@@ -39,6 +39,7 @@ namespace xmlProcess
                 doc.idDoc = node.Attributes["ИдДок"].Value;
                 doc.dateState = node.Attributes["ДатаСост"].Value;
                 doc.dateInclude = node.Attributes["ДатаВклМСП"].Value;
+                Console.WriteLine(node.SelectSingleNode("СведМН").Attributes["КодРегион"].Value);
                 docs.Add(doc);
             }
             Console.WriteLine(docs.Count);
