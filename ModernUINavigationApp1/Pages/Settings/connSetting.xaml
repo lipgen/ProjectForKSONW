@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="ModernUINavigationApp1.Pages.Settings.connSetting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="22" />
+                        <RowDefinition Height="22" />
+                        <RowDefinition Height="22" />
+                        <RowDefinition Height="22" />
+                        <RowDefinition Height="22" />
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.ColumnSpan="2" Grid.Row="0" Content="Настройки подключения к БД" FontWeight="Bold" FontSize="16" />
+
+                    <TextBlock Text="Сервер:"  Grid.Row="1"/>
+                    <TextBlock Text="Имя пользователя:" Grid.Row="2"/>
+                    <TextBlock Text="Название БД:" Grid.Row="3"/>
+                    <TextBlock Text="Порт:" Grid.Row="4" />
+                    <TextBlock Text="Пароль:" Grid.Row="5"/>
+
+                    <Button x:Name="buttonAppl" Content="Применить" Grid.Row="6" FontSize="10" Height="33" Width="98" HorizontalAlignment="Left" IsEnabled="False" Margin="0,5,0,2" Click="buttonAppl_Click"/>
+
+                    <TextBox x:Name="textBox1" Height="20" Grid.Row="1" Grid.Column="1" Margin="10,1" TextChanged="textBox1_TextChanged"/>
+                    <TextBox x:Name="textBox2" Height="20" Grid.Row="2" Grid.Column="1" Margin="10,1" TextChanged="textBox2_TextChanged"/>
+                    <TextBox x:Name="textBox3" Height="20" Grid.Row="3" Grid.Column="1" Margin="10,1" TextChanged="textBox3_TextChanged" />
+                    <TextBox x:Name="textBox4" Height="20" Grid.Row="4" Grid.Column="1" Margin="10,1" TextChanged="textBox4_TextChanged"/>
+                    <TextBox x:Name="textBox5" Height="20" Grid.Row="5" Grid.Column="1" Margin="10,1" TextChanged="textBox5_TextChanged"/>
+
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

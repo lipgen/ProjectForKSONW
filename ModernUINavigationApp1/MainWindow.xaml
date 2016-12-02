@@ -1,0 +1,38 @@
+﻿<mui:ModernWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="ModernUINavigationApp1.MainWindow"
+        Title="Управление данными ЮЛ и ИП" IsTitleVisible="True"
+        ContentSource="/Pages/StatusPage.xaml" Height="394" Width="497.865" ResizeMode="NoResize">
+
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Статус">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Информация о состоянии данных" Source="/Pages/StatusPage.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        
+        <mui:LinkGroup DisplayName="Обновление базы">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Обновление базы" Source="/Pages/UpdatePage.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        
+        <mui:LinkGroup DisplayName="Данные из БД">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Данные из БД" Source="/Pages/DataPage.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="settings" GroupKey="settings">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="software" Source="/Pages/SettingsPage.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+
+    <mui:ModernWindow.TitleLinks>
+        <mui:Link DisplayName="settings" Source="/Pages/SettingsPage.xaml" />
+        <mui:Link DisplayName="help" Source="https://www.nalog.ru/rn19/" />
+    </mui:ModernWindow.TitleLinks>
+</mui:ModernWindow>

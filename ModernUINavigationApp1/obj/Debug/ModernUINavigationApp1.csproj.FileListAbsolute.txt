@@ -1,0 +1,74 @@
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\ModernUINavigationApp1.exe
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\ModernUINavigationApp1.pdb
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\FirstFloor.ModernUI.dll
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\FirstFloor.ModernUI.xml
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1.csprojResolveAssemblyReference.cache
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\MainWindow.baml
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\About.baml
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\Appearance.baml
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\SettingsPage.baml
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\App.baml
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\MainWindow.g.cs
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\About.g.cs
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\Appearance.g.cs
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\SettingsPage.g.cs
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\App.g.cs
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1_MarkupCompile.cache
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1.g.resources
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1.exe
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1.pdb
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\StatusPage.baml
+c:\users\паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\StatusPage.g.cs
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Data.dll
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Data.Entity.EF5.dll
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Fabric.Plugin.dll
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Web.dll
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Data.xml
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Data.Entity.EF5.xml
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Web.xml
+C:\Users\Паша\Documents\Visual Studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\SharpCompress.dll
+C:\Users\Паша\Documents\Visual Studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\UpdatePage.baml
+C:\Users\Паша\Documents\Visual Studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\UpdatePage.g.cs
+C:\Users\Паша\Documents\Visual Studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\DataPage.baml
+C:\Users\Паша\Documents\Visual Studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\DataPage.g.cs
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1_Content.g.cs
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\connSetting.baml
+C:\Users\Паша\documents\visual studio 2015\Projects\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\connSetting.g.cs
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\ModernUINavigationApp1.exe.config
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1.exe
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1.pdb
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\ModernUINavigationApp1.exe
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\ModernUINavigationApp1.pdb
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Data.Entity.EF5.dll
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Fabric.Plugin.dll
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\SharpCompress.dll
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Data.Entity.EF5.xml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\connSetting.baml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\About.baml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\Appearance.baml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\DataPage.baml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\UpdatePage.baml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\StatusPage.baml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\SettingsPage.baml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\App.baml
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\connSetting.g.cs
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\About.g.cs
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\Settings\Appearance.g.cs
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\DataPage.g.cs
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\UpdatePage.g.cs
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\StatusPage.g.cs
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\Pages\SettingsPage.g.cs
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\App.g.cs
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1_Content.g.cs
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1_MarkupCompile.cache
+C:\Users\user\Desktop\ModernUINavigationApp1\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1.g.resources
