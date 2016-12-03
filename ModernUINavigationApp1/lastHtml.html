@@ -1,0 +1,793 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html id="ctl00_MainHtml" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" version="XHTML+RDFa 1.0" dir="ltr" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:sioc="http://rdfs.org/sioc/ns#">
+<head id="ctl00_Head"><title>
+	Единый реестр субъектов малого и среднего предпринимательства |  ФНС  | 77 город Москва
+</title>
+
+<!-- META -->
+<meta charset="utf-8" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+<meta name='yandex-verification' content='64e993bc1cba8691' />
+
+<meta name='yandex-verification' content='534b89f266e08b1a' />
+
+<meta name='description' content='Единый реестр субъектов малого и среднего предпринимательства |  ФНС  | 77 город Москва' />
+
+<!-- Global CSS -->
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/css/ul/style.css?ver=2.4.1">
+<link rel="stylesheet" type="text/css" href="/css/ul/functions.css?ver=2.3.5">
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="/js/jquery-1.10.1.min.js"></script> 
+
+<!-- JQuery.UI -->
+<link rel="stylesheet" href="/css/ul/cupertino/jquery-ui-1.12.1.css" />
+<script src="/js/jquery-ui-1.12.1.min.js"></script>
+<script src="/js/jquery.ui.datepicker-ru.min.js"></script>
+
+<!-- JQuery.Plugins -->
+<script type="text/javascript" src="/js/select2/select2.min.js"></script>
+<script type="text/javascript" src="/js/select2/i18n/ru.js"></script>
+<link rel="stylesheet" href="/css/select2/select2.min.css">
+
+<script src="/js/jquery.cascade.js?ver=2.3.2"></script>
+<script src="/js/jquery.smslider.min.js"></script>
+<script src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/jquery.gallerie.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/ul/gallerie.css">
+<link rel="stylesheet" type="text/css" href="/css/ul/gallerie-effects.css">
+
+<!-- JQuery.ICheck Custom checkbox & radio -->	
+<link rel="stylesheet" href="/css/ul/jquery.icheck.css">
+<script src="/js/jquery.icheck.js"></script>
+
+<!-- Listbox -->
+<link rel="stylesheet" href="/css/ul/ui.dynatree.css">
+<script src="/js/jquery.dynatree.min.js"></script>
+<script src="/js/ul/tree.init.js"></script>
+<!-- Lightbox -->
+<script src="/js/jquery.colorbox-min.js"></script>	
+
+<!-- Custom scroll -->
+<link rel="stylesheet" href="/css/ul/jquery.jscrollpane.css">
+<script src="/js/jquery.mousewheel.js"></script> 
+<script src="/js/jquery.jscrollpane.min.js"></script>
+
+<!-- Responsive tables -->
+<link rel="stylesheet" href="/css/ul/responsive-tables.css">
+<script src="/js/ul/responsive-tables.js"></script> 
+
+<!-- Players -->
+<link rel="stylesheet" href="/css/ul/mediaelementplayer.min.css?ver=1.0.1" media="screen">
+<script src="/js/mediaelement-and-player.min.js?ver=1.0.1"></script>
+<script type="text/javascript" src="/js/swfobject.js"></script>
+
+<!-- Functions -->
+<script type="text/javascript" src="/js/ul/functions.js?ver=2.4.8"></script>
+<script type="text/javascript" src="/js/ul/functions_init.js?ver=2.3.1"></script>
+
+<!-- Версия для слабовидящих -->
+<script src="/js/uhpv-full.js"></script>
+<script>
+	var uhe = 2,
+		lng = 'ru',
+		has = 0,
+		imgs = 1,
+		bg = 1,
+		hwidth = 0,
+		bgs = ['1', '2'],
+		fonts = ['17', '19', '21'];
+	$(document).ready(function () { uhpv(has) });
+</script>
+
+<script type="text/javascript"> var mkgu_widget_param = { au: '10003719075', private_block: 1 };</script>
+<script type="text/javascript" src="https://vashkontrol.ru/widget/mkgu_widget.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function ()
+	{	
+		$(".content_form > a.bigger").AdvPanel();
+		$(".sp").Spoiler({});
+		$('.scroll-pane').jScrollPane();
+		$('.scroll-pane1').jScrollPane({ showArrows: true });
+
+		$('#gallery').gallerie({
+			elem: 'a.img_link',
+		});
+
+		$('input').iCheck({
+			checkboxClass: 'icheckbox_minimal-blue',
+			radioClass: 'iradio_minimal-blue',
+			increaseArea: '20%' // не обязательно
+		});
+
+		$('#CtrlEnterAnchor').click(function (e) { CtrlEnterClick(); });
+
+		$(document).keydown(function (e) { if (e.ctrlKey && e.keyCode == 13) CtrlEnterClick(); });
+	});
+
+	$(window).resize(function ()
+	{
+		$('.scroll-pane').jScrollPane();
+		$('.scroll-pane1').jScrollPane({ showArrows: true });
+	});
+
+	$(document).on("click", "span.dynatree-expander", function (e)
+	{
+		$(this).closest(".scroll-pane").jScrollPane();
+		var pane = $('.scroll-pane');
+		var api = pane.data('jsp');
+		api.reinitialise();
+	});
+
+	function CtrlEnterClick()
+	{
+		var txt = '';
+		if (txt = window.getSelection) // Not IE, используем метод getSelection
+			txt = window.getSelection().toString();
+		else // IE, используем объект selection
+			txt = document.selection.createRange().text;
+
+		var tar = $("<textarea id='CtrlEnterTxt' class='text ui-widget-content ui-corner-all' style='width:620px;height:200px'></textarea>").append($.trim(txt));
+
+		var form = $("<fieldset></fieldset>")
+			 .append("<label for='CtrlEnterDescr'>Ваше сообщение:</label><br />")
+			 .append("<textarea id='CtrlEnterDescr' class='text ui-widget-content ui-corner-all' style='width:620px;height:50px'></textarea><br />")
+			 .append("<label for='CtrlEnterTxt'>Ошибка в тексте:</label><br />")
+			 .append(tar);
+
+		var di = $("<div id='ctrl_enter_form' title='Сообщить об ошибке в тексте'></div>")
+		.append(form);
+
+		di.dialog({
+			autoOpen: true,
+			height: 500,
+			width: 700,
+			modal: true,
+			buttons: {
+				"Отправить": function ()
+				{
+					$.ajax(
+					{
+						url: "/Ajax.html",
+						data:
+						{
+							type: "CtrlEnter",
+							url: location.href,
+							text: $("#CtrlEnterTxt").val().replace(/\n\n/g, "\n"),
+							descr: $("#CtrlEnterDescr").val()
+						},
+						type: "POST"
+					});
+					$(this).find("fieldset").replaceWith("<h2>Ваше сообщение отправлено. Спасибо!</h2>");
+					$(this).dialog("option", "buttons", [{ text: "Ok", click: function () { $(this).dialog("close"); } }]);
+				},
+				"Отмена": function ()
+				{
+					$(this).dialog("close");
+				}
+			}
+		});
+
+	}
+
+	(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date(); a = s.createElement(o),
+		m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-45876719-1', 'nalog.ru');
+	ga('send', 'pageview');
+
+</script>
+
+
+<meta name="designer" content="3288" />
+
+<meta name="keywords" content="" />
+</head>
+<body lang="ru" >
+	<div class="totop"></div>
+	
+	<form method="post" action="./" id="MainForm" enctype="multipart/form-data">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="oc3v+c3MN1KF2dBe5Ad1Z48TskM5gGNqfR6VY64gfLw5po3NVnekzRQ5aDb+GPP61swE3Q==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="112E02C5" />
+		<div id="wrapper">
+			
+
+<script type="text/javascript">
+
+	function RedirectZoneF()
+	{
+
+		var ddl = document.getElementById("ctl00__93e384fa0576a9_ddlRegion_firstpage");
+
+		location.href = location.href.replace("/rn77/", "/" + ddl.options[ddl.selectedIndex].value + "/")
+	}
+
+	$(document).ready(function ()
+	{
+
+		$("#bt_main_search_f").click(function ()
+		{
+			var t1 = $("#tb_main_search_f").val();
+
+			if (t1.length > 0)
+			{
+				location.href = "/rn77/search/?text=(" + t1 + ")";
+	 		}
+	 	});
+
+
+	 	$("#tb_main_search_f").keydown(function (e)
+	 	{
+	 		if (e.which == 13)
+	 		{
+	 			$("#bt_main_search_f").click();
+	 		}
+	 	});
+
+
+	});
+
+</script>
+
+
+
+<div class="top">
+	<div class="region">
+
+		<span class="reg_label">Ваш регион</span>
+
+		<select name="ctl00$_93e384fa0576a9$ddlRegion_firstpage" id="ctl00__93e384fa0576a9_ddlRegion_firstpage" class="select-type01 writable" onchange="RedirectZoneF()" style="display: none;">
+	<option value="rn01">01 Республика Адыгея </option>
+	<option value="rn02">02 Республика Башкортостан</option>
+	<option value="rn03">03 Республика Бурятия</option>
+	<option value="rn04">04 Республика Алтай</option>
+	<option value="rn05">05 Республика Дагестан</option>
+	<option value="rn06">06 Республика Ингушетия</option>
+	<option value="rn07">07 Кабардино-Балкарская Республика</option>
+	<option value="rn08">08 Республика Калмыкия</option>
+	<option value="rn09">09 Карачаево-Черкесская Республика</option>
+	<option value="rn10">10 Республика Карелия</option>
+	<option value="rn11">11 Республика Коми</option>
+	<option value="rn12">12 Республика Марий Эл</option>
+	<option value="rn13">13 Республика Мордовия</option>
+	<option value="rn14">14 Республика Саха (Якутия)</option>
+	<option value="rn15">15 Республика Северная Осетия-Алания</option>
+	<option value="rn16">16 Республика Татарстан</option>
+	<option value="rn17">17 Республика Тыва</option>
+	<option value="rn18">18 Удмуртская Республика</option>
+	<option value="rn19">19 Республика Хакасия</option>
+	<option value="rn20">20 Чеченская Республика</option>
+	<option value="rn21">21 Чувашская Республика</option>
+	<option value="rn22">22 Алтайский край</option>
+	<option value="rn23">23 Краснодарский край</option>
+	<option value="rn24">24 Красноярский край</option>
+	<option value="rn25">25 Приморский край</option>
+	<option value="rn26">26 Ставропольский край</option>
+	<option value="rn27">27 Хабаровский край</option>
+	<option value="rn28">28 Амурская область</option>
+	<option value="rn29">29 Архангельская область и Ненецкий ао</option>
+	<option value="rn30">30 Астраханская область</option>
+	<option value="rn31">31 Белгородская область</option>
+	<option value="rn32">32 Брянская область</option>
+	<option value="rn33">33 Владимирская область</option>
+	<option value="rn34">34 Волгоградская область</option>
+	<option value="rn35">35 Вологодская область</option>
+	<option value="rn36">36 Воронежская область</option>
+	<option value="rn37">37 Ивановская область</option>
+	<option value="rn38">38 Иркутская область</option>
+	<option value="rn39">39 Калининградская область</option>
+	<option value="rn40">40 Калужская область</option>
+	<option value="rn41">41 Камчатский край</option>
+	<option value="rn42">42 Кемеровская область</option>
+	<option value="rn43">43 Кировская область</option>
+	<option value="rn44">44 Костромская область</option>
+	<option value="rn45">45 Курганская область</option>
+	<option value="rn46">46 Курская область</option>
+	<option value="rn47">47 Ленинградская область</option>
+	<option value="rn48">48 Липецкая область</option>
+	<option value="rn49">49 Магаданская область</option>
+	<option value="rn50">50 Московская область</option>
+	<option value="rn51">51 Мурманская область</option>
+	<option value="rn52">52 Нижегородская область</option>
+	<option value="rn53">53 Новгородская область</option>
+	<option value="rn54">54 Новосибирская область</option>
+	<option value="rn55">55 Омская область</option>
+	<option value="rn56">56 Оренбургская область</option>
+	<option value="rn57">57 Орловская область</option>
+	<option value="rn58">58 Пензенская область</option>
+	<option value="rn59">59 Пермский край</option>
+	<option value="rn60">60 Псковская область</option>
+	<option value="rn61">61 Ростовская область</option>
+	<option value="rn62">62 Рязанская область</option>
+	<option value="rn63">63 Самарская область</option>
+	<option value="rn64">64 Саратовская область</option>
+	<option value="rn65">65 Сахалинская область</option>
+	<option value="rn66">66 Свердловская область</option>
+	<option value="rn67">67 Смоленская область</option>
+	<option value="rn68">68 Тамбовская область</option>
+	<option value="rn69">69 Тверская область</option>
+	<option value="rn70">70 Томская область</option>
+	<option value="rn71">71 Тульская область</option>
+	<option value="rn72">72 Тюменская область</option>
+	<option value="rn73">73 Ульяновская область</option>
+	<option value="rn74">74 Челябинская область</option>
+	<option value="rn75">75 Забайкальский край</option>
+	<option value="rn76">76 Ярославская область</option>
+	<option selected="selected" value="rn77">77 город Москва</option>
+	<option value="rn78">78 Санкт-Петербург</option>
+	<option value="rn79">79 Еврейская автономная область</option>
+	<option value="rn86">86 Ханты-Мансийский автономный округ-Югра</option>
+	<option value="rn87">87 Чукотский АО</option>
+	<option value="rn89">89 Ямало-Ненецкий автономный округ</option>
+	<option value="rn91">91 Республика Крым</option>
+	<option value="rn92">92 город Севастополь</option>
+
+</select>
+
+		<span class="map_icon">
+		<img alt="Выберите регион по карте" title="Выберите регион по карте" src="/css/ul/i/top_map.png"></span>
+
+
+		<div class="map_div">
+			<div>
+				<div class="map_hint">Введите первые буквы или номер региона, выберите из списка или на карте.</div>
+				<div class="map_embed">
+					<embed src="/css/ul/i/region_map.swf" width="600" height="375"
+						type="application/x-shockwave-flash" wmode="transparent"
+						pluginspage="http://www.macromedia.com/go/getflashplayer">
+				</div>
+			</div>
+			<span class="link_close"></span>
+		</div>
+
+	</div>
+
+	<div class="upper">
+
+
+
+		<span id="menu-target-1" class="dropdown_menu_link">
+			<a>Вышестоящие органы</a>
+			<span id="menu-content-1" class="dropdown_menu">
+				<span><a href="http://government.ru/" target="_blank">Правительство РФ</a></span>
+				<span><a href="http://www.minfin.ru/" target="_blank">Минфин России</a></span>
+			</span>
+		</span>
+	</div>
+
+	<div class="top_links"><a href="/rn77/about_fts/video/">Видеопомощник</a> <a href="/rn77/about_fts/docs_fts/">Документы</a></div>
+	<div class="lang" style="background: url(/css/ul/i/lang_rus.png) no-repeat;"><span></span><a href="/eng/"></a></div>
+	<!--div class="lang" style="background:url(images/new/lang_en.png) no-repeat;"><a href="/"></a><span></span></div-->
+	<div class="header_font">
+		<span id="decrease"><a>A-</a></span>
+		<span id="reset" class="limit_size"><a>A</a></span>
+		<span id="increase"><a>A+</a></span>
+	</div>
+	<div class="clear"></div>
+
+</div>
+
+<div id="header" class="header">
+	<div class="logo">
+		<a href="/">
+			<img src="/css/ul/i/logo.png" alt=""></a>
+	</div>
+
+	<div class="header_left" id="title_norm">
+		<span class="site_title" id="title_id"><a href="/">Федеральная<br>
+			Налоговая служба</a></span>
+	</div>
+
+	<div class="header_left" id="title_spec" style="display: none;">
+		<span class="site_title"><a class="title_spec" href="/">Федеральная Налоговая служба</a></span>
+	</div>
+
+
+	<div class="header_search">
+		<div style="padding: 0 5px 5px 0; float: right;">
+			<a href="https://www.facebook.com/nalog.ru/" target="_blank">
+				<img src="/css/ul/icons/soc/i_facebook.png"></a>
+			<a href="https://vk.com/nalog__ru" target="_blank">
+				<img src="/css/ul/icons/soc/i_vk.png"></a>
+			<a href="https://twitter.com/nalog__ru" target="_blank">
+				<img src="/css/ul/icons/soc/i_twitter.png"></a>
+		</div>
+
+		<input id="tb_main_search_f" type="text" class="inputbox placeholder" placeholder="Поиск по сайту">
+		<button id="bt_main_search_f" type="button"></button>
+		<div class="header_links  "><a class="link1" href="/rn77/about_fts/"  id="link1_id">О ФНС России</a> <a class="link2" href="/rn77/apply_fts/" id="link2_id">Контакты и обращения</a></div>
+	</div>
+	<div class="clear"></div>
+
+	<div id="ctl00__93e384fa0576a9_pan_topmenu" class="topmenu">
+		<span id="menu-target-2" class="dropdown_menu_link link3">
+			<a>Налогообложение в РФ</a>
+			<span id="menu-content-2" class="dropdown_menu">
+				<span><a href="/rn77/taxation/taxes/">Действующие в РФ налоги и сборы</a></span><span><a href="/rn77/taxation/tax_legislation/">Налоговое законодательство и разъяснения ФНС России</a></span><span><a href="/rn77/taxation/prejudicial/">Досудебное урегулирование налоговых споров</a></span><span><a href="/rn77/taxation/jud_settlement/">Судебное урегулирование налоговых споров</a></span><span><a href="/rn77/taxation/submission_statements/">Представление налоговой и бухгалтерской отчётности</a></span><span><a href="/rn77/taxation/transfer_pricing/">Трансфертное ценообразование</a></span><span><a href="/rn77/taxation/consolidated_group/">Консолидированная группа налогоплательщиков</a></span><span><a href="/rn77/taxation/kbk/">Коды классификации доходов бюджетов Российской Федерации, администрируемых Федеральной налоговой службой в 2016 году</a></span><span><a href="/rn77/taxation/taxation_abroad/">Налогообложение работающих за рубежом граждан РФ</a></span><span><a href="/rn77/taxation/util_sbor/">Утилизационный сбор</a></span><span><a href="/rn77/taxation/nkotaxes/">Налогообложение некоммерческих организаций</a></span><span><a href="/rn77/taxation/shopcoll/">Торговый сбор</a></span><span><a href="/rn77/taxation/reg_krim/">Сведения о юридических лицах, созданных на территориях Республики Крым и г. Севастополя до 18 марта 2014 г., сведения о которых внесены в ЕГРЮЛ в связи с приведением ими своих учредительных документов в соответствие с законодательством Российской Федерации</a></span><span><a href="/rn77/taxation/specdecl/">Специальная декларация</a></span><span><a href="/rn77/taxation/debt/">Задолженность</a></span><span><a href="/rn77/taxation/arch_news/">Архив новостей по задолженности и банкротству</a></span><span><a href="/rn77/taxation/bankruptcy/">Банкротство</a></span><span><a href="/rn77/taxation/reference_work/">Контрольная работа</a></span><span><a href="/rn77/taxation/insprem/">Страховые взносы 2017</a></span>
+			</span>
+		</span>
+		<span id="menu-target-3" class="dropdown_menu_link link4">
+			<a>Иные функции ФНС</a>
+			<span id="menu-content-3" class="dropdown_menu">
+				<span><a href="/rn77/related_activities/accounting/">Учёт организаций и физических лиц</a></span><span><a href="/rn77/related_activities/regbusiness/">Единый реестр субъектов малого и среднего предпринимательства</a></span><span><a href="/rn77/related_activities/registration_ip_yl/">Регистрация ЮЛ и ИП</a></span><span><a href="/rn77/related_activities/adjustable/">Госрегулируемые виды деятельности</a></span><span><a href="/rn77/related_activities/statistics_and_analytics/">Статистика и аналитика</a></span><span><a href="/rn77/related_activities/prevention_corruption/">Противодействие коррупции</a></span><span><a href="/rn77/related_activities/registries/">Реестры и проверка контрагентов</a></span><span><a href="/rn77/related_activities/megdunarodnoe/">Международное налогообложение</a></span><span><a href="/rn77/related_activities/reg_kkt/">Регистрация контрольно-кассовой техники</a></span><span><a href="/rn77/related_activities/accred_branches/">Аккредитация филиалов, представительств иностранных юридических лиц</a></span><span><a href="/rn77/related_activities/foreign_clients/">Направление информации организациями финансового рынка</a></span><span><a href="/rn77/related_activities/reg16/">Изменение законодательства о регистрации с 1 января 2016 года</a></span><span><a href="/rn77/related_activities/exchange_controls/">Валютный контроль</a></span><span><a href="/rn77/related_activities/ls/">Представление взыскателю сведений о банковских счетах должника</a></span>
+			</span>
+		</span>
+		<a class="link1" href="/rn77/about_fts/" id="link1__id">О ФНС России</a>
+		<a class="link2" href="/rn77/apply_fts/" id="link2__id">Контакты и обращения</a>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+	$("#main .topmenu").MainMenu();
+</script>
+
+			<div id="main">
+				
+<!-- AltNav -->
+<div class="bread_crumbs">
+	<a id="ctl00_ctl04_hlMain" href="/rn77/">Главная страница</a>
+	/
+<a href="/rn77/opendata/">Открытые данные</a> / 
+</div>
+<!-- /AltNav -->
+<table id="ctl00_ctl05_td_title" class="title">
+	<tr>
+		<td>
+			<h1>Единый реестр субъектов малого и среднего предпринимательства</h1>
+		</td>
+		<td>
+			<div class="print_signin">
+				<a id="ctl00_ctl05_hlPrint" class="print_link" href="https://www.nalog.ru/opendata/7707329152-rsmp/print/" target="_blank">Распечатать</a>
+				<button class="sign_in" type="button" style="display: none" >
+					<span>Вход в <u>личный кабинет</u></span>
+				</button>
+			</div>
+		</td>
+	</tr>
+</table>
+
+
+
+<script type="text/javascript">
+	$(window).on("uvcl_modify", function ()
+	{
+		$("#tb_main_search_f").hide();				// # - по id скрыть
+		$("#bt_main_search_f").hide();				// # - по id скрыть
+		$(".top_links").hide();				// # - по id скрыть
+		$(".upper").hide();				// # - по id скрыть
+		$(".header_font").hide();				// # - по id скрыть
+		$(".header_search").hide();				// # - по id скрыть
+		$(".print_signin").hide();				// # - по id скрыть
+
+		$("#title_norm").hide();				// # - по id скрыть
+		$("#title_spec").show();				// # - по id скрыть
+
+		$("#link1__id").addClass("padding_head"); // . - по классу добавить класс
+		$("#link2__id").addClass("padding_head"); // . - по классу добавить класс
+		$("#menu-target-3").addClass("padding_head"); // . - по классу добавить класс
+		$("#menu-target-2").addClass("padding_head"); // . - по классу добавить класс
+		$("#menu-target-2").css("width", "27%"); // по классу поставить всем стиль наклонного шрифта
+		$("#menu-target-3").css("width", "23%"); // по классу поставить всем стиль наклонного шрифта
+	});
+</script>
+
+<div class="content">
+	
+<div class="link_about" style="padding-top: 10px;"><a href="/rn77/service/opinion/?id=6530"><strong>Оставить отзыв</strong></a></div>
+<div typeof="foaf:Document" about="/opendata/7707329152-rsmp">
+	<div rel="dc:conformsTo" resource="http://opendata.gosmonitor.ru/standard/3.0"></div>
+	<table class="border_table">
+		<tr>
+			<th>№</th>
+			<th>Характеристика</th>
+			<th>Значение характеристики</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Идентификационный номер</td>
+			<td property="dc:identifier">7707329152-rsmp</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Наименование набора данных</td>
+			<td property="dc:title">Единый реестр субъектов малого и среднего предпринимательства</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Описание набора данных</td>
+			<td property="dc:description">Набор содержит сведения о юридических лицах и индивидуальных предпринимателях, включенных в Единый реестр субъектов малого и среднего предпринимательства</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Владелец набора данных</td>
+			<td property="dc:creator">ФНС России</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Ответственное лицо</td>
+			<td>Медведенко Лариса Леонидовна (заместитель начальника отдела методологии ведения, мониторинга государственных реестров и предоставления информации Управления регистрации и учёта налогоплательщиков)</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Телефон ответственного лица</td>
+			<td>+7 (495) 913-03-03</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>Адрес электронной почты ответственного лица</td>
+			<td>mns10620@nalog.ru</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Гиперсылка (URL) на набор</td>
+			<td><a href="https://www.nalog.ru/opendata/7707329152-rsmp/data-11252016-structure-08012016.zip">https://www.nalog.ru/opendata/7707329152-rsmp/data-11252016-structure-08012016.zip</a></td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>Формат данных</td>
+			<td>xml</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Описание структуры набора данных</td>
+			<td><a href="https://www.nalog.ru/opendata/7707329152-rsmp/structure-08012016.xsd">https://www.nalog.ru/opendata/7707329152-rsmp/structure-08012016.xsd</a></td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>Дата первой публикации набора данных</td>
+			<td property="dc:created">01.08.2016</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>Дата последнего внесения изменений</td>
+			<td>25.11.2016</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>Содержание последнего изменения</td>
+			<td>Обновление данных набора</td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>Дата актуальности</td>
+			<td property="dc:valid">10.12.2016</td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>Ключевые слова, соответствующие содержанию набора данных</td>
+			<td property="dc:subject">Реестр МСП, малое и среднее предпринимательство, субъекты МСП, малый бизнес, РМСП</td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>Гиперссылки (URL) на предыдущие релизы набора данных</td>
+			<td><a href="https://www.nalog.ru/opendata/7707329152-rsmp/data-08262016-structure-08012016.zip">https://www.nalog.ru/opendata/7707329152-rsmp/data-08262016-structure-08012016.zip</a><br>
+
+<a href="https://www.nalog.ru/opendata/7707329152-rsmp/data-09102016-structure-08012016.zip">https://www.nalog.ru/opendata/7707329152-rsmp/data-09102016-structure-08012016.zip</a></td>
+		</tr>
+		<tr>
+			<td>17</td>
+			<td>Гиперссылки (URL) на предыдущие версии структуры набора данных</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>18</td>
+			<td>Версия методических рекомендаций</td>
+			<td>3.0</td>
+		</tr>
+	</table>
+	<div rel="dc:publisher" resource="#publisher"></div>
+	<div rel="dc:source" resource="#data"></div>
+</div>
+<div typeof="foaf:Person" about="#publisher">
+	<div property="foaf:name" content="Медведенко Лариса Леонидовна (заместитель начальника отдела методологии ведения, мониторинга государственных реестров и предоставления информации Управления регистрации и учёта налогоплательщиков)"></div>
+	<div property="foaf:phone" content="+7 (495) 913-03-03"></div>
+	<div property="foaf:mbox" content="mns10620@nalog.ru"></div>
+</div>
+<div typeof="dc:Collection" about="#data">
+	<div rel="dc:hasPart" resource="#data-1">
+		<div typeof="foaf:Document" about="#data-1">
+			<div property="dc:source" content="https://www.nalog.ru/opendata/7707329152-rsmp/data-11252016-structure-08012016.zip"></div>
+			<div property="dc:format" content="xml"></div>
+			<div property="dc:created" content="01.08.2016"></div>
+			<div property="dc:provenance" content="Обновление данных набора"></div>
+			<div rel="dc:conformsTo" resource="#structure-1"></div>
+		</div>
+	</div>
+</div>
+<div>
+	<div typeof="foaf:Document" about="#structure-1">
+		<div property="dc:source" content="https://www.nalog.ru/opendata/7707329152-rsmp/structure-08012016.xsd"></div>
+		<div property="dc:format" content="xsd"></div>
+		<div property="dc:created" content="01.08.2016"></div>
+	</div>
+</div>
+<p><a href="/opendata/7707329152-rsmp/7707329152-rsmp.csv"><strong>* Скачать одним файлом (*.csv)</strong></a></p>
+<hr />
+
+
+
+</div>
+
+
+<div class="nav_mobile">
+				<div id="mini-spoiler2">
+					<p><a class="maximizator">Налогообложение в РФ</a></p>
+					<div class="ms-content" style="display:none;">
+						<p><a class='black' href="/rn77/taxation/taxes/">Действующие в РФ налоги и сборы</a></p><p><a class='black' href="/rn77/taxation/tax_legislation/">Налоговое законодательство и разъяснения ФНС России</a></p><p><a class='black' href="/rn77/taxation/prejudicial/">Досудебное урегулирование налоговых споров</a></p><p><a class='black' href="/rn77/taxation/jud_settlement/">Судебное урегулирование налоговых споров</a></p><p><a class='black' href="/rn77/taxation/submission_statements/">Представление налоговой и бухгалтерской отчётности</a></p><p><a class='black' href="/rn77/taxation/transfer_pricing/">Трансфертное ценообразование</a></p><p><a class='black' href="/rn77/taxation/consolidated_group/">Консолидированная группа налогоплательщиков</a></p><p><a class='black' href="/rn77/taxation/kbk/">Коды классификации доходов бюджетов Российской Федерации, администрируемых Федеральной налоговой службой в 2016 году</a></p><p><a class='black' href="/rn77/taxation/taxation_abroad/">Налогообложение работающих за рубежом граждан РФ</a></p><p><a class='black' href="/rn77/taxation/util_sbor/">Утилизационный сбор</a></p><p><a class='black' href="/rn77/taxation/nkotaxes/">Налогообложение некоммерческих организаций</a></p><p><a class='black' href="/rn77/taxation/shopcoll/">Торговый сбор</a></p><p><a class='black' href="/rn77/taxation/reg_krim/">Сведения о юридических лицах, созданных на территориях Республики Крым и г. Севастополя до 18 марта 2014 г., сведения о которых внесены в ЕГРЮЛ в связи с приведением ими своих учредительных документов в соответствие с законодательством Российской Федерации</a></p><p><a class='black' href="/rn77/taxation/specdecl/">Специальная декларация</a></p><p><a class='black' href="/rn77/taxation/debt/">Задолженность</a></p><p><a class='black' href="/rn77/taxation/arch_news/">Архив новостей по задолженности и банкротству</a></p><p><a class='black' href="/rn77/taxation/bankruptcy/">Банкротство</a></p><p><a class='black' href="/rn77/taxation/reference_work/">Контрольная работа</a></p><p><a class='black' href="/rn77/taxation/insprem/">Страховые взносы 2017</a></p>										
+					</div>
+				</div>
+				<div id="mini-spoiler3">
+					<p><a class="maximizator">Иные функции ФНС</a></p>
+					<div class="ms-content" style="display:none;">
+							<p><a class='black' href="/rn77/related_activities/accounting/">Учёт организаций и физических лиц</a></p><p><a class='black' href="/rn77/related_activities/regbusiness/">Единый реестр субъектов малого и среднего предпринимательства</a></p><p><a class='black' href="/rn77/related_activities/registration_ip_yl/">Регистрация ЮЛ и ИП</a></p><p><a class='black' href="/rn77/related_activities/adjustable/">Госрегулируемые виды деятельности</a></p><p><a class='black' href="/rn77/related_activities/statistics_and_analytics/">Статистика и аналитика</a></p><p><a class='black' href="/rn77/related_activities/prevention_corruption/">Противодействие коррупции</a></p><p><a class='black' href="/rn77/related_activities/registries/">Реестры и проверка контрагентов</a></p><p><a class='black' href="/rn77/related_activities/megdunarodnoe/">Международное налогообложение</a></p><p><a class='black' href="/rn77/related_activities/reg_kkt/">Регистрация контрольно-кассовой техники</a></p><p><a class='black' href="/rn77/related_activities/accred_branches/">Аккредитация филиалов, представительств иностранных юридических лиц</a></p><p><a class='black' href="/rn77/related_activities/foreign_clients/">Направление информации организациями финансового рынка</a></p><p><a class='black' href="/rn77/related_activities/reg16/">Изменение законодательства о регистрации с 1 января 2016 года</a></p><p><a class='black' href="/rn77/related_activities/exchange_controls/">Валютный контроль</a></p><p><a class='black' href="/rn77/related_activities/ls/">Представление взыскателю сведений о банковских счетах должника</a></p>
+					</div>
+				</div>
+				
+       </div>
+
+
+<script type="text/javascript">
+	$("#mini-spoiler2").MiniSpoiler('maximizator', 'minimizator');
+	$("#mini-spoiler3").MiniSpoiler('maximizator', 'minimizator');
+</script>
+
+<div class="ctrl_enter">
+	Если Вы заметили на сайте опечатку или неточность, мы будем признательны, если Вы сообщите об этом.<br>
+	Выделите текст, который, по Вашему мнению, содержит ошибку, и нажмите на клавиатуре комбинацию клавиш: Ctrl + Enter или нажмите <a id="CtrlEnterAnchor">сюда</a>.
+</div>
+
+<div id="main_menu" class="main_menu_footer">
+	<span><a class="menu_1" href="/rn77/fl/">Физические лица</a></span>
+	<span><a class="menu_2" href="/rn77/ip/">Индивидуальные предприниматели</a></span>
+	<span><a class="menu_3 last" href="/rn77/yul/">Юридические лица</a></span>
+</div>
+
+
+			</div>
+		</div>
+		
+
+<div id="footer">
+	<div class="footer_frame">
+		<div class="footer_holder">
+
+		<div class="footer_col">
+				<ul class="footer_list">
+					<li><a href="/rn77/about_fts/el_usl/">Электронные сервисы</a></li>
+					<li><a href="/rn77/program/">Программные средства</a></li>
+					<li><a href="/opendata/">Открытые данные</a></li>
+				   <li><a href="/rn77/about_fts/brochure/">Электронные брошюры</a></li>
+				   <li><a href="/rn77/about_fts/video/">Видеоматериалы</a></li>
+					<li><a href="/rn77/news/smi/presentation/">Презентационные видеоматериалы</a></li>										
+				</ul>
+
+<div style="padding: 0 5px 5px 0;">
+<a href="https://www.facebook.com/nalog.ru/" target="_blank"><img src="/css/ul/icons/soc/i_facebook_f.png"></a>
+<a href="https://vk.com/nalog__ru" target="_blank"><img src="/css/ul/icons/soc/i_vk_f.png"></a>
+<a href="https://twitter.com/nalog__ru" target="_blank"><img src="/css/ul/icons/soc/i_twitter_f.png"></a>
+</div>
+			</div>
+
+			<div class="footer_col">
+				<ul class="footer_list_right">
+					<li><a href="/rn77/about_fts/docs_fts/">Документы</a></li>
+					<li><a href="http://nalog.garant.ru/fns/nk/">Налоговый кодекс</a></li>
+					<li><a href="http://forum.nalog.ru/">Форум</a></li>			
+					<li><a href="/rn77/apply_fts/">Контакты</a></li>
+					<li><a href="http://nalog.ru/rn77/about_fts/fts/civil_service/">Вакансии</a></li>				
+					<li style="padding-top: 1px !important;"><a href="/rn77/about_fts/fts/deti/">Подшефные детские дома</a></li>
+				</ul>
+			</div>
+
+			<script type="text/javascript">
+
+			    $("#div-new-tab1").NewTabs();
+			    $("#div-new-tab2").NewTabs();
+			    $("#div-new-tab3").NewTabs();
+			    $("#div-new-tab4").NewTabs();
+			    $("#div-new-tab5").NewTabs();
+			    $("#div-new-tab6").NewTabs();
+
+				var ucnt = 0;
+				$(document).ready(function (event, ui)
+				{
+					$("#urefr .urefr_block").click(function (event, ui)
+					{
+						ucnt++;
+						if (ucnt > 4) $("#refr").show();
+					});
+				});
+			</script>
+			<div class="footer_right" id="urefr">
+				<ul class="info_list_footer urefr_block">			
+					<li><a href="/rn77/subscribe/" class="link_subscribe">Настройка подписки</a></li>
+					<li><a href="/rn77/rss/" class="link_updates">RSS-обновления</a></li>
+					<li><a href="/rn77/sitemap/" class="link_map">Карта сайта</a></li>				
+				</ul>
+				<div class="copy_div urefr_block">			
+					<div class="copyright_div"><a href="/rn77/copyright/" class="color_gray">Об использовании информации сайта</a></div>			
+					<div class="copy">© 2005-2016 ФНС России</div>
+					<p>Дата обновления страницы 02.12.2016</p>					
+				</div>
+				<div id="refr" class="copy_div" style="display:none">
+					25 w<br />
+					01.01.0001 0:00:00<br />
+					<a rel="nofollow" target="_blank" href="https://admin.nalog.ru/new/opendata/7707329152-rsmp/" style="color:red">АДМИН Р / </a> 
+					<a rel="nofollow" target="_blank" href="https://admin.nalog.ru/rn77/opendata/7707329152-rsmp/" style="color:red">АДМИН Л / </a> 
+				</div>
+
+				<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+	var _tmr = _tmr || [];
+	_tmr.push({ id: "25782", type: "pageView", start: (new Date()).getTime() });
+	(function (d, w, id) {
+		if (d.getElementById(id)) return;
+		var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+		ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+		var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+		if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+	})(document, window, "topmailru-code");
+</script><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=25782;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+<!-- Rating@Mail.ru logo -->
+<a href="http://top.mail.ru/jump?from=25782" target="_blank">
+<img src="//top-fwz1.mail.ru/counter?id=25782;t=502;l=1" 
+style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" /></a>
+<!-- //Rating@Mail.ru logo -->
+
+
+
+<!-- begin of Top100 logo -->
+<a href="http://top100.rambler.ru/navi/289463/" target="_blank">
+<img src="https://scounter.rambler.ru/img/top100/banner-88x31-rambler-blue.gif" alt="Rambler's Top100"
+width="88" height="31" border="0" /></a>
+<!-- end of Top100 logo --
+
+<!-- begin of Top100 code -->
+<script id="top100Counter" type="text/javascript" src="https://scounter.rambler.ru/top100.jcn?289463"></script>
+<noscript>
+<img src="https://scounter.rambler.ru/top100.cnt?289463" alt="" width="1" height="1" border="0" />
+</noscript>
+<!-- end of Top100 code -->
+
+
+
+
+<!-- Yandex.Metrika counter --><script type="text/javascript">var yaParams = {/*Здесь параметры визита*/ };</script><script type="text/javascript">                               	(function (d, w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter23729197 = new Ya.Metrika({ id: 23729197, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true, trackHash: true, params: window.yaParams || {} }); } catch (e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/23729197" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+
+
+
+			</div>
+	
+		</div>
+	</div>
+</div>
+
+	</form>
+	<a class="fixed_shortcut" href="/rn77/service/anket/4467190/"></a>	
+	<div id="mkgu-widget">
+	<a class="fixed_shortcut_vc" href="#"></a>
+   </div>
+
+
+
+</body>
+</html>

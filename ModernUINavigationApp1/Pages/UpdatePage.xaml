@@ -8,9 +8,7 @@
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer Margin="3,6,-3,-6">
             <StackPanel MinWidth="200">
-                <ProgressBar x:Name="pb" Height="22" Width="256"/>
-                <TextBlock x:Name="label1" Text="{Binding Value, ElementName=pb, StringFormat=\{0:0\}%}" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <Button x:Name="button" FontSize="10" Content="Загрузить архив" Width="108" Click="button_Click"/>
+               
             </StackPanel>
         </ScrollViewer>
     </Grid>

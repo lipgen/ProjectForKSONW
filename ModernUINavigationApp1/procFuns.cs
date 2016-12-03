@@ -1,6 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,8 +15,6 @@ using System.Runtime.InteropServices;
 
 namespace ModernUINavigationApp1
 {
-    
-
     //Класс для хранения копии XML узла
     public class Document
     {
@@ -71,8 +68,15 @@ namespace ModernUINavigationApp1
         public string pd = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
         public void settingParser(string[] sCol)
         {
-            procFuns pf = new procFuns();
-            string[] data = File.ReadAllLines(pd + @"\setting.ini");
+            string[] data;
+            if (File.Exists(pd + @"\setting.ini")) {
+                data = File.ReadAllLines(pd + @"\setting.ini");
+            } else {
+                data = new string[] { "[db_setting]", "server=localhost", "user=root", "database=reg19", "port=3306", "password=1234",
+                                      "[data_getting_setting]", "rsmpURL=https://www.nalog.ru/opendata/7707329152-rsmp", "lastArchDate=01.01.2016",
+                                      "lastArchURL=", "deletePriv=1" };
+                File.WriteAllLines(pd + @"\setting.ini", data);
+            }
             int j = 0;
             for (int i = 0; i < data.Length; i++)
             {

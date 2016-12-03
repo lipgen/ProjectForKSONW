@@ -3,6 +3,7 @@ using SharpCompress.Common;
 using SharpCompress.Reader;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Linq;
@@ -24,20 +25,17 @@ using System.Xml;
 
 namespace ModernUINavigationApp1.Pages
 {
-    /// <summary>
-    /// Interaction logic for StatusPage.xaml
-    /// </summary>
-
     public partial class StatusPage : UserControl
     {
         procFuns pf = new procFuns();
-        static string[] sCol = new string[6];
+        static string[] sCol = new string[9];
+        string lastArch;
+
         public StatusPage()
         {
             InitializeComponent();
             Main();
         }
-
 
         public void Main()
         {
@@ -50,30 +48,36 @@ namespace ModernUINavigationApp1.Pages
                 object result = cmd.ExecuteScalar();
                 if (result != null)
                     Label1Date.Content = result;
-            }
-            catch (Exception ex)
-            {
-                textBox.Text = ex.ToString();
+            } catch (Exception ex) {
+                textBox.Text += "Невозможно обратиться к базе данных: \n";
+                textBox.Text += ex.Message + "\n";
             }
             conn.Close();
             //fill Label2Date
-            try
-            {
-                using (var wc = new WebClient())
-                {
-                    wc.DownloadFile(sCol[5], pf.pd + @"\actualdata.csv");
-                    string[] data = File.ReadAllLines(pf.pd + @"\actualdata.csv");
-                    string[] spl = data[12].Split(';');
-                    string url = spl[2];
-                    Label2Date.Content = url;
+            try {
+                using (var wc = new WebClient()) {
+                    wc.DownloadFile(sCol[5], pf.pd + @"\lastHtml.html");
+                    string[] data = File.ReadAllLines(pf.pd + @"\lastHtml.html");
+                    for (int i = 0; i < data.Length; i++)
+                    {
+                        if (data[i].Contains("Гиперсылка (URL) на набор"))
+                            lastArch = data[i + 1].Substring(data[i + 1].IndexOf("a href=") + 8, data[i + 1].IndexOf(".zip") - 12);
+                        if (data[i].Contains("Дата последнего внесения изменений"))
+                            Label2Date.Content = data[i + 1].Substring(data[i + 1].IndexOf(">", 0) + 1, data[i + 1].IndexOf(">", 0) + 4);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                textBox.Text = ex.ToString();
+            } catch (Exception ex) {
+                textBox.Text += "Невозможно получить информацию о состоянии данных: \n" ;
+                textBox.Text += ex.Message + "\n";
             }
         }
+
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            archProccess();
+        }
+
+        void archProccess()
         {
             string[] fileEntries;
             string filePath = pf.pd + @"\xmlExamples.rar";
@@ -329,6 +333,34 @@ namespace ModernUINavigationApp1.Pages
             {
                 textBox.Text = "Error " + ex.Number + " has occurred: " + ex.Message;
             }
+        }
+
+        static string pd = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+        void downloader_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+
+            pb.Value = e.ProgressPercentage;
+            label1.Text = e.ProgressPercentage + "%" + " " + (e.BytesReceived / 1000000) + "/" + (e.TotalBytesToReceive / 1000000);
+        }
+        void downloader_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            if (e.Error != null)
+                MessageBox.Show(e.Error.Message);
+            else
+                MessageBox.Show("Completed!!!");
+            button.IsEnabled = true;
+        }
+
+        private void button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            /*string[] data = File.ReadAllLines(pd + @"\actualdata.csv");
+            string[] spl = data[8].Split(';');*/
+            string url = lastArch;
+            button.IsEnabled = false;
+            WebClient downloader = new WebClient();
+            downloader.DownloadFileCompleted += new AsyncCompletedEventHandler(downloader_DownloadFileCompleted);
+            downloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(downloader_DownloadProgressChanged);
+            downloader.DownloadFileAsync(new Uri(url), pd + @"\temp.zip");
         }
     }
 }
