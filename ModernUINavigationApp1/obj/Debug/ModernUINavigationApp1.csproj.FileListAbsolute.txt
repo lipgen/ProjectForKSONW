@@ -92,7 +92,6 @@ C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\Set
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\Settings\About.baml
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\Settings\Appearance.baml
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\DataPage.baml
-C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\UpdatePage.baml
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\StatusPage.baml
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\SettingsPage.baml
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\App.baml
@@ -101,7 +100,6 @@ C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\Set
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\Settings\About.g.cs
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\Settings\Appearance.g.cs
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\DataPage.g.cs
-C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\UpdatePage.g.cs
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\StatusPage.g.cs
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\SettingsPage.g.cs
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\App.g.cs

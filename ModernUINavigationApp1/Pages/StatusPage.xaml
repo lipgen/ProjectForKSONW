@@ -19,7 +19,7 @@
                         <RowDefinition Height="22" />
                         <RowDefinition Height="22" />
                         <RowDefinition Height="50" />
-                        <RowDefinition Height="50" />
+                        <RowDefinition Height="60" />
                         <RowDefinition Height="50" />
                         <RowDefinition Height="50" />
                     </Grid.RowDefinitions>

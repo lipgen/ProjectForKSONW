@@ -4,7 +4,7 @@
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="ModernUINavigationApp1.MainWindow"
         Title="Управление данными ЮЛ и ИП" IsTitleVisible="True"
-        ContentSource="/Pages/StatusPage.xaml" Height="394" Width="497.865" ResizeMode="NoResize">
+        ContentSource="/Pages/StatusPage.xaml" Height="415" Width="497.865" ResizeMode="NoResize">
 
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="Статус">
@@ -13,17 +13,12 @@
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         
-        <mui:LinkGroup DisplayName="Обновление базы">
-            <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Обновление базы" Source="/Pages/UpdatePage.xaml" />
-            </mui:LinkGroup.Links>
-        </mui:LinkGroup>
-        
         <mui:LinkGroup DisplayName="Данные из БД">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="Данные из БД" Source="/Pages/DataPage.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
+        
         <mui:LinkGroup DisplayName="settings" GroupKey="settings">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="software" Source="/Pages/SettingsPage.xaml" />

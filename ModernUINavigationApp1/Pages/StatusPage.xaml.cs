@@ -82,44 +82,32 @@ namespace ModernUINavigationApp1.Pages
             string[] fileEntries;
             string filePath = pf.pd + @"\xmlExamples.rar";
             Array.ForEach(Directory.GetFiles(pf.pd + @"\temp"), File.Delete);
-            try
-            {
-                using (Stream stream = File.OpenRead(filePath))
-                {
+            try {
+                using (Stream stream = File.OpenRead(filePath)) {
                     var reader = ReaderFactory.Open(stream);
-                    while (reader.MoveToNextEntry())
-                    {
-                        if (!reader.Entry.IsDirectory)
-                        {
+                    while (reader.MoveToNextEntry()) {
                             reader.WriteEntryToDirectory(pf.pd + @"\temp", ExtractOptions.ExtractFullPath | ExtractOptions.Overwrite);
                             fileEntries = Directory.GetFiles(pf.pd + @"\temp");
-                            if (fileEntries.Length >= 10)
-                            {
-                                filesProcess(fileEntries);
+                            if (fileEntries.Length == 10) {
+                                xmlsProcess(fileEntries);
                                 Array.ForEach(Directory.GetFiles(pf.pd + @"\temp"), File.Delete);
                             }
-                        }
-                        else
-                        {
-                            fileEntries = Directory.GetFiles(pf.pd + @"\temp");
-                            if (fileEntries.Length > 0)
-                            {
-                                filesProcess(fileEntries);
-                                Array.ForEach(Directory.GetFiles(pf.pd + @"\temp"), File.Delete);
-                            }
-                        }
+                    }
+                    fileEntries = Directory.GetFiles(pf.pd + @"\temp");
+                    if (fileEntries.Length > 0) {
+                        xmlsProcess(fileEntries);
+                        Array.ForEach(Directory.GetFiles(pf.pd + @"\temp"), File.Delete);
                     }
                 }
-                textBox.Text = "Data has been successfully updated";
+                textBox.Text = "Данные были загружены в базу";        
              }
-             catch (Exception ex)
-             {
+             catch (Exception ex) {
                  textBox.Text = ex.ToString();
              }
         }
 
         //XMLs Processing
-        void filesProcess(string[] fileEntries)
+        void xmlsProcess(string[] fileEntries)
         {
             List<Document> docs = new List<Document>();
             foreach (string fileName in fileEntries)
