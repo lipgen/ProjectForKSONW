@@ -25,21 +25,57 @@ using System.Xml;
 
 namespace ModernUINavigationApp1.Pages
 {
-    /// <summary>
-    /// Interaction logic for DataPage.xaml
-    /// </summary>
-
-
-
     public partial class DataPage : UserControl
     {
+        procFuns pf = new procFuns();
+        static string[] sCol = new string[9];
         
+
         public DataPage()
         {
             InitializeComponent();
             
+            pf.settingParser(sCol);
+            try {
+                var conn = new MySqlConnection("server=" + sCol[0] + ";user=" + sCol[1] + ";database=" + sCol[2] + ";port=" + sCol[3] + ";password=" + sCol[4] + ";");
+                conn.Open();
+                //fill comboBox1
+                comboBox1.Items.Add("");
+                var cmd = new MySqlCommand("SELECT * FROM reg19.dir_районы;", conn);
+                var dataReader = cmd.ExecuteReader();
+                while (dataReader.Read()) comboBox1.Items.Add(dataReader["НаимРайона"].ToString());
+                dataReader.Close();
+                //fill comboBox2
+                comboBox2.Items.Add("");
+                cmd = new MySqlCommand("SELECT * FROM reg19.dir_города;", conn);
+                dataReader = cmd.ExecuteReader();
+                while (dataReader.Read()) comboBox2.Items.Add(dataReader["НаимГород"].ToString());
+            } catch (Exception ex) {
+                textBox.Text += ex.ToString();
+            }
         }
 
-        
+        private void ButtonExcel_Click(object sender, RoutedEventArgs e)
+        {
+            var conn = new MySqlConnection("server=" + sCol[0] + ";user=" + sCol[1] + ";database=" + sCol[2] + ";port=" + sCol[3] + ";password=" + sCol[4] + ";");
+            conn.Open();
+            string sql = "SELECT * FROM reg19.документ WHERE";
+            if (checkBox1.IsChecked == true)
+            {
+                try
+                {
+                    sql += " ВидСубМСП = '1';";
+                    var cmd = new MySqlCommand(sql, conn);
+                    var dataReader = cmd.ExecuteReader();
+                    while (dataReader.Read()) textBox.Text += dataReader["ID_ДокИдДок"].ToString() + "\n";
+                    dataReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    textBox.Text += ex.ToString();
+                }
+            }
+        }
+      
     }
 }

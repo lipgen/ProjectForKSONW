@@ -87,6 +87,7 @@ namespace ModernUINavigationApp1
                 }
             }
         }
+
         public void execStorProc(string spName, string[] paramName, string[] paramCont, MySqlConnection conn)
         {
             MySqlCommand cmd = new MySqlCommand();
@@ -99,8 +100,6 @@ namespace ModernUINavigationApp1
                 cmd.Parameters["@" + paramName[i]].Direction = ParameterDirection.Input;
             }
             cmd.ExecuteNonQuery();
-        }
-
-       
+        }  
     }
 }

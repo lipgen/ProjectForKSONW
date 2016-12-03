@@ -228,7 +228,6 @@ namespace ModernUINavigationApp1.Pages
                     }
                 }
             }
-            
         }
 
         void fillDataIntoDB(Document doc)
@@ -245,6 +244,7 @@ namespace ModernUINavigationApp1.Pages
                                            "_ID_СведОснИНН", "_ЮЛ_НаимОрг", "_ЮЛ_НаимОргСокр" };
                     string[] paramCont = { doc.a1, doc.a2, doc.a3, doc.a4, doc.a5, doc.a6, doc.c1, doc.c2, doc.c3, doc.c4, doc.c5, doc.b1, doc.b2, doc.b3 };
                     pf.execStorProc("insert_документюл", paramName, paramCont, conn);
+                    
                 } else {
                     string[] paramName = { "_ID_ДокИдДок", "_ДатаСост", "_ДатаВклМСП", "_ВидСубМСП", "_КатСубМСП", "_ПризНовМСП", 
                                            "_КодРегион", "_Регион", "_Район", "_Город", "_НаселПункт", 
@@ -252,13 +252,29 @@ namespace ModernUINavigationApp1.Pages
                     string[] paramCont = { doc.a1, doc.a2, doc.a3, doc.a4, doc.a5, doc.a6, doc.c1, doc.c2, doc.c3, doc.c4, doc.c5, doc.b1, doc.b2, doc.b3, doc.b4 };
                     pf.execStorProc("insert_документип", paramName, paramCont, conn);
                 }
+
+                //таб "dir_районы" и "dir_города" 
+                var cmd1 = new MySqlCommand("SELECT * FROM reg19.dir_районы WHERE НаимРайона = '" + doc.c3 + "';", conn);
+                if (cmd1.ExecuteScalar() == null)
+                {
+                    string[] paramName1 = { "_НаимРайона" };
+                    string[] paramCont1 = { doc.c3 };
+                    pf.execStorProc("insert_dir_районы", paramName1, paramCont1, conn);
+                }
+                cmd1 = new MySqlCommand("SELECT * FROM reg19.dir_города WHERE НаимГород = '" + doc.c4 + "';", conn);
+                if (cmd1.ExecuteScalar() == null)
+                {
+                    string[] paramName1 = { "_НаимГород" };
+                    string[] paramCont1 = { doc.c3 };
+                    pf.execStorProc("insert_dir_города", paramName1, paramCont1, conn);
+                }
+
                 //таб "своквэд"
                 if (doc.InfoRCoEAmain != null)
                 {
                     var cmd = new MySqlCommand("SELECT * FROM reg19.dir_своквэд WHERE ID_СвОКВЭДКодОКВЭД = '" + doc.InfoRCoEAmain.a1 + "';", conn);
                     if (cmd.ExecuteScalar() == null)
                     {
-                        string s = cmd.ExecuteScalar() as string;
                         string[] paramName = { "_КодОКВЭД", "_НаимОКВЭД", "_ВерсОКВЭД" };
                         string[] paramCont = { doc.InfoRCoEAmain.a1, doc.InfoRCoEAmain.a2, doc.InfoRCoEAmain.a3 };
                         pf.execStorProc("insert_свокэд", paramName, paramCont, conn);
@@ -283,7 +299,6 @@ namespace ModernUINavigationApp1.Pages
                             cmd = new MySqlCommand("SELECT * FROM reg19.dir_своквэд WHERE ID_СвОКВЭДКодОКВЭД = '" + doc.InfoRCoEAmain.a1 + "';", conn);
                             if (cmd.ExecuteScalar() == null)
                             {
-                                string s = cmd.ExecuteScalar() as string;
                                 string[] paramName = { "_КодОКВЭД", "_НаимОКВЭД", "_ВерсОКВЭД" };
                                 string[] paramCont = { info.a1, info.a2, info.a3 };
                                 pf.execStorProc("insert_свокэд", paramName, paramCont, conn);
@@ -308,7 +323,6 @@ namespace ModernUINavigationApp1.Pages
                         var cmd = new MySqlCommand("SELECT * FROM reg19.conn_документсвлиценз WHERE ID_СвЛицензСерНомВидЛиценз = '" + info.a1 + "';", conn);
                         if (cmd.ExecuteScalar() == null)
                         {
-                            string s = cmd.ExecuteScalar() as string;
                             string[] paramName = { "_ID_СвЛицензСерНомВидЛиценз" , "_ДатаЛиценз", "_ДатаНачЛиценз", "_ДатаКонЛиценз", "_ОргВыдЛиценз", "_ДатаОстЛиценз",
                                                    "_ОргОстЛиценз", "_НаимЛицВД", "_СведАдрЛицВД", "_Id_ДокИдДок" };
                             string[] paramCont = { info.a1, info.a2, info.a3, info.a4, info.a5, info.a6, info.a7, info.a8, info.a9, doc.a1 };
@@ -341,8 +355,6 @@ namespace ModernUINavigationApp1.Pages
 
         private void button_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            /*string[] data = File.ReadAllLines(pd + @"\actualdata.csv");
-            string[] spl = data[8].Split(';');*/
             string url = lastArch;
             button.IsEnabled = false;
             WebClient downloader = new WebClient();
