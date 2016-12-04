@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using SharpCompress.Common;
 using SharpCompress.Reader;
+using Excel = Microsoft.Office.Interop.Excel; 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +31,6 @@ namespace ModernUINavigationApp1.Pages
         procFuns pf = new procFuns();
         static string[] sCol = new string[9];
         
-
         public DataPage()
         {
             InitializeComponent();
@@ -50,6 +50,7 @@ namespace ModernUINavigationApp1.Pages
                 cmd = new MySqlCommand("SELECT * FROM reg19.dir_города;", conn);
                 dataReader = cmd.ExecuteReader();
                 while (dataReader.Read()) comboBox2.Items.Add(dataReader["НаимГород"].ToString());
+                conn.Close();
             } catch (Exception ex) {
                 textBox.Text += ex.ToString();
             }
@@ -57,24 +58,34 @@ namespace ModernUINavigationApp1.Pages
 
         private void ButtonExcel_Click(object sender, RoutedEventArgs e)
         {
+            textBox.Text = "";
             var conn = new MySqlConnection("server=" + sCol[0] + ";user=" + sCol[1] + ";database=" + sCol[2] + ";port=" + sCol[3] + ";password=" + sCol[4] + ";");
             conn.Open();
             string sql = "SELECT * FROM reg19.документ WHERE";
-            if (checkBox1.IsChecked == true)
-            {
-                try
-                {
-                    sql += " ВидСубМСП = '1';";
+            //ЮЛ
+            if (checkBox1.IsChecked == true) {
+                try {
+                    sql += " ВидСубМСП = '1' ";
                     var cmd = new MySqlCommand(sql, conn);
                     var dataReader = cmd.ExecuteReader();
                     while (dataReader.Read()) textBox.Text += dataReader["ID_ДокИдДок"].ToString() + "\n";
                     dataReader.Close();
                 }
-                catch (Exception ex)
-                {
-                    textBox.Text += ex.ToString();
-                }
+                catch (Exception ex) { textBox.Text += ex.ToString(); }
             }
+            //ИП
+            if (checkBox2.IsChecked == true) {
+                try {
+                    sql += (checkBox1.IsChecked == true) ? " AND ВидСубМСП = '2' " : " ВидСубМСП = '2' ";
+                    var cmd = new MySqlCommand(sql, conn);
+                    var dataReader = cmd.ExecuteReader();
+                    while (dataReader.Read()) textBox.Text += dataReader["ID_ДокИдДок"].ToString() + "\n";
+                    dataReader.Close();
+                }
+                catch (Exception ex) { textBox.Text += ex.ToString(); }
+            }
+            sql += ";";
+            pf.CreateSheet();
         }
       
     }

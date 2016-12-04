@@ -21,7 +21,8 @@ namespace ModernUINavigationApp1.Pages.Settings
     public partial class connSetting : UserControl
     {
         procFuns pf = new procFuns();
-        static string[] sCol = new string[6];
+        static string[] sCol = new string[9];
+
         public connSetting()
         {
             InitializeComponent();

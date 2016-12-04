@@ -106,3 +106,5 @@ C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\App.g.cs
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1_Content.g.cs
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1_MarkupCompile.cache
 C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1.g.resources
+C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\DataGridPage.baml
+C:\Users\user\Desktop\ProjectForKSONW\ModernUINavigationApp1\obj\Debug\Pages\DataGridPage.g.cs

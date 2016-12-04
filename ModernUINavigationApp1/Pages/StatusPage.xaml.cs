@@ -70,6 +70,7 @@ namespace ModernUINavigationApp1.Pages
                 textBox.Text += "Невозможно получить информацию о состоянии данных: \n" ;
                 textBox.Text += ex.Message + "\n";
             }
+            conn.Close();
         }
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
