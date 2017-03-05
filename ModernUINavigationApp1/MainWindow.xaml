@@ -15,7 +15,8 @@
         
         <mui:LinkGroup DisplayName="Данные из БД">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Данные из БД" Source="/Pages/DataPage.xaml" />
+                <mui:Link DisplayName="Excel" Source="/Pages/DataPage.xaml" />
+                <mui:Link DisplayName="Data Grid" Source="/Pages/DataGridPage.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         
