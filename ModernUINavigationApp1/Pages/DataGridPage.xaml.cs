@@ -45,7 +45,7 @@ namespace ModernUINavigationApp1.Pages
                 var conn = new MySqlConnection("server=" + sCol[0] + ";user=" + sCol[1] + ";database=" + sCol[2] + ";port=" + sCol[3] + ";password=" + sCol[4] + ";");
                 conn.Open();
 
-                var cmd = new MySqlCommand("SELECT * FROM reg19.документ LIMIT 10;", conn);
+                var cmd = new MySqlCommand("SELECT * FROM reg19.документ;", conn);
                 List<Docum> docs = new List<Docum>();
                 var dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())

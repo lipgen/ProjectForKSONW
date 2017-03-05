@@ -15,13 +15,10 @@ using System.Windows.Shapes;
 
 namespace ModernUINavigationApp1.Pages.Settings
 {
-    /// <summary>
-    /// Interaction logic for About.xaml
-    /// </summary>
     public partial class connSetting : UserControl
     {
         procFuns pf = new procFuns();
-        static string[] sCol = new string[9];
+        static string[] sCol = new string[11];
 
         public connSetting()
         {
